@@ -3,9 +3,8 @@ name: Test and Build
 on:
   push:
     branches:
-    - main
-    paths:
-    - '/*'
+      - main
+
 
 jobs:
   build:
