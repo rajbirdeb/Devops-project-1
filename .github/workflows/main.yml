@@ -38,7 +38,7 @@ jobs:
     # Push the Docker Image
     - name: Push Docker Image
       run: |
-        docker push sibasish934/argocd-demo-frontend:${{ env.VERSION }}
+        docker push rajbir019/ci-cd:${{ env.VERSION }}
 
     # UPdate the K8s Manifest Files
     - name: Update K8s Manifests
