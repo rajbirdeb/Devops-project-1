@@ -84,7 +84,7 @@ jobs:
       # Set kubeconfig
       - name: Update kubeconfig
         run: |
-          aws eks --region eu-north-1 update-kubeconfig --name testing-cluster
+          aws eks --region eu-north-1 update-kubeconfig --name testing-cluster-1
 
       # Deploy to EKS (including sealed secret)
       - name: Apply Kubernetes Manifests
