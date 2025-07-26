@@ -40,6 +40,15 @@ jobs:
       run: |
         docker push rajbir019/ci-cd:${{ env.VERSION }}
 
+     # Scan Image with Trivy
+    - name: Run Trivy vulnerability scanner
+      uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: rajbir019/ci-cd:${{ env.VERSION }}
+        format: table
+        ignore-unfixed: true
+        vuln-type: os,library
+
     # UPdate the K8s Manifest Files
     - name: Update K8s Manifests
       run: |
