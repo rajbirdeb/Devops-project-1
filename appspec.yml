@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+  - source: /dist
+    destination: /usr/share/nginx/html
+    overwrite: yes
+
+hooks:
+  BeforeInstall:
+    - location: scripts/stop.sh
+      timeout: 300
+      runas: root
+
+  AfterInstall:
+    - location: scripts/start.sh
+      timeout: 300
+      runas: root

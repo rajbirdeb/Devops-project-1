@@ -1,1 +1,1 @@
-github_oauth_token = "REDACTED"
+github_oauth_token = ""
