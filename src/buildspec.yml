@@ -2,18 +2,19 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 20
     commands:
-      - echo Installing Node.js v20.19.0 using n...
-      - npm install -g n
-      - n 20.19.0
-      - node -v  # confirm Node version
-      - npm -v   # confirm NPM version
+      - echo Using Node.js version:
+      - node -v
+      - echo Using NPM version:
+      - npm -v
       - echo Installing dependencies...
       - npm install
 
   build:
     commands:
-      - echo Building the React app...
+      - echo Building the app...
       - npm run build
 
 artifacts:
