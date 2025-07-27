@@ -15,6 +15,6 @@ resource "aws_codebuild_project" "react_build" {
 
   source {
     type            = "CODEPIPELINE"
-    buildspec       = "buildspec.yml"  # ✅ Correct: keep this here
+    buildspec       = "src/buildspec.yml"  # ✅ Correct: keep this here
   }
 }
