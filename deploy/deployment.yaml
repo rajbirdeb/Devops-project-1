@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: ci-cd
-        image: rajbir019/ci-cd:v20250727095948
+        image: rajbir019/ci-cd:v20250727100406
         ports:
         - containerPort: 80
